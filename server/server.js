@@ -1,7 +1,7 @@
 import express from "express";
 import mongoose from "mongoose";
 import dotenv from "dotenv";
-import cors from "cors";
+import cors from "cors"
 
 const app = express();
 
@@ -20,7 +20,7 @@ app.get("/", (req, res) => {
 });
 
 mongoose
-  .connect(process.env.CONNECTION_URL)
+  .connect(process.env.MONGODB_URL)
   .then(() => {
     app.listen(PORT, () => {
       console.log("Database connected and server running on port: ", PORT);
